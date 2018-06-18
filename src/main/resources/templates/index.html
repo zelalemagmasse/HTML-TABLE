@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        function myFunction() {
+            var table = document.getElementById("theTable");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "NEW CELL1";
+            cell2.innerHTML = "NEW CELL2";
+        }
+    </script>
 </head>
 <style>
     table, th, td {
@@ -14,7 +24,9 @@
     }
 </style>
 <body>
-  <table>
+
+<table id="theTable">
+
       <caption>Formulas and Results</caption>
       <tr><th>Formula</th><th>Result</th></tr>
       <tr><td>1 + 1</td><td>2</td></tr>
@@ -22,5 +34,8 @@
 
 
   </table>
+<button onclick="myFunction()">Add Rows</button>
+<h>The above table</h>
+
 </body>
 </html>
